@@ -1,0 +1,94 @@
+<!DOCTYPE html>
+<html lang="fr">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
+    <link rel="stylesheet" href="/css/style.css">
+    <title>Hoopsolid - Boutique Basketball</title>
+</head>
+<body>
+    <header class="header">
+        <nav class="navbar">
+            <ul>
+                <li>
+                    <a href="/index.html" class="logo">
+                        <img src="/img/Logo cinéma.png" alt="logo hoopsolid" class="logo">
+                    </a>
+                </li>
+                <li><a href="/index.html" class="nav-link">Acceuil</a></li>
+                <li><a href="/rechercher.html" class="nav-link">Recherche</a></li>
+                <li><a href="#Notre mission" class="nav-link">Notre mission</a></li>
+                <li><a href="/contact.html" class="nav-link">Contact</a></li>
+                <a href="/connexion.html" class="btn-connexion">
+                    <i class="fa-solid fa-magnifying-glass"></i>
+                </a>
+            </ul>
+        </nav>
+    </header>
+
+    <section class="recherche_section">
+        <h1>Rechercher un <span>film.</span></h1>
+
+        <p>
+            Taper le titre d'un film pour découvrir le resultat en temps réel.
+        </p>
+
+        <form class="search-form">
+            <input type="text" name="query" placeholder="Rechercher un film..." required>
+            <button type="submit"><i class="fa-solid fa-magnifying-glass"></i></button>
+        </form>
+
+    </section>
+
+    <main id="boutique">
+        <section class="produits-phares">
+            <h2>Resultats de recherche</h2>
+
+            <div class="grille-produits" id="search-results">
+      
+                                    
+            </div>
+        </section>
+                
+    </main>
+
+    <footer class="footer">
+        <div class="footer-top">
+            <div class="footer-logo">
+                <a href="#logo">
+                    <img src="/img/Logo cinéma.png" alt="logo cinéma">
+                </a>
+            </div>
+
+            <div class="footer-links">
+                <a class="n-link" href="/index.html">Acceuil</a>
+                <a class="n-link" href="/boutique.html">Boutique</a>
+                <a class="n-link" href="#Notre mission">Notre mission</a>
+                <a class="n-link" href="/contact.html">Contact</a>
+            </div>
+
+            <div class="footer-reseau">
+                <a href="/404.html" class="contact-link" aria-label="Instagram">
+                    <i class="fa-brands fa-instagram"></i>
+                </a>
+                <a class="contact-link" href="/404.html" aria-label="Facebook">
+                    <i class="fa-brands fa-facebook-f"></i>
+                </a>
+                <a class="contact-link" href="/404.html" aria-label="Youtube">
+                    <i class="fa-brands fa-youtube"></i>
+                </a>
+                
+            </div>
+        </div>
+
+        <div class="footer-bottom">
+            <p style="text-align: center;">
+                &copy; 2026 Athanse NGAIPORO-YAGBENGUE. All rights reserved.
+            </p>
+        </div>
+
+    </footer>
+    <script src="/Js/rechercher.js" mode="defer"></script>
+</body>
+</html>
