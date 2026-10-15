@@ -51,12 +51,25 @@ async function afficherTendances() {
   }
 }
 
+
 afficherTendances();
 
 
 const TERME_2026 = "man";
 let pageApi = 1;
 let reserve = [];
+
+function creerPetiteCarte(film) {
+  return `
+  <article class="carte-film">
+    <img src="${film.Poster}" alt="Affiche de ${film.Title}"></img>
+    <h3>${film.Title}</h3>
+    <p>${film.Year}</p>
+    <a href="./movie.html?id=${film.imdbID}">En savoir plus</a>
+  </article>
+  `;
+}
+
 
 // Affichage de 5 films, Omdb en affiche 10 par page
 // donc on doit limiter les résulats en utilisant une réserve
@@ -74,7 +87,7 @@ async function chargerPlus() {
   const cinqFilms2026 = reserve.splice(0, 5);
   const conteneur = document.getElementById("liste-2026");
   for (const film of cinqFilms2026) {
-    conteneur.insertAdjacentHTML("beforeend", creerCarte(film));
+    conteneur.insertAdjacentHTML("beforeend", creerPetiteCarte(film));
   }
 
   // Si on a épuisé la réserve, on cache le bouton "charger_plus"
