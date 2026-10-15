@@ -1,0 +1,594 @@
+@import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
+
+body {
+    font-family: 'Montserrat', sans-serif;
+    margin: 0;
+    padding: 0;
+    background-color: #061018;
+    color: white;
+}
+
+.header{
+    background-color: #020b12;
+    color: white;
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    padding: 10px 15px;
+    border-bottom: 1px solid black;
+
+}
+
+.navbar ul{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+    flex-wrap: wrap;
+    list-style: none;
+    gap: 10px;
+    margin: 0;
+    padding: 0;
+}
+
+.navbar li{
+    display: flex;
+    align-items: center;
+ 
+}
+
+.logo{
+    flex: 0 0 auto;
+}
+
+.logo img{
+    width: 80px;
+    height: auto;
+    display: block;
+}
+
+
+
+.nav-link{
+    color: white; 
+    text-decoration: none;
+    font-size: 18px;
+    white-space: nowrap;
+    font-weight: 500;
+    transition: color 0.3 ease;
+    margin-left: 150px;
+}
+
+.nav-link:hover{
+    color: red;
+}
+
+.hero_section{
+    background-image: url(/img/Cinéma.png);
+    background-position: center;
+    background-repeat: no-repeat;
+    background-size: cover; 
+    display: flex;
+    flex-direction: column;
+    min-height: 600px;
+    justify-content: center;
+    align-items: flex-start;
+    padding: 30px 20px;
+}
+
+.hero_section h1{
+    padding-top: 30px;
+    font-size: 70px;
+    color: white;
+    font-weight: 600;
+}
+
+.hero_section h1 span{
+    color: red;
+}
+
+.hero_section p{
+    color: white;
+    font-weight: 200;
+    font-size: 30px;
+}
+
+.hero_section a{
+    color: white;
+    text-decoration: none;
+
+    border: none;
+    border-radius: 18px;
+    font-size: 18px;
+    font-weight: 600;
+    cursor: pointer;
+    padding: 10px 10px 10px;
+}
+
+
+.btn-hero:hover{
+    background-color: orangered;
+}
+
+/* ===== Rechercher===== */
+
+.search-form{
+    display: flex;
+    width: 40%;
+    spacing: 10px;
+}
+
+.search-form input[type="text"]{
+    flex: 1;
+    padding: 10px;
+    margin-left: 30px;
+    border: none;
+    border-radius: 4px 0 0 4px;
+    font-size: 16px;
+}
+
+search-form button[type="submit"]{
+    margin-left: 20px;
+    padding: 10px 20px;
+    color: white;
+    border: none;
+    border-radius:4px;
+    cursor: pointer;
+}
+
+
+/* ===== PRODUITS PHARES ===== */
+
+.produits-phares{
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.grille-produits{
+    display: grid;
+    max-width: 1200px;
+    grid-template-columns:1fr;
+    margin: 0 auto;
+    gap: 20px;
+}
+
+.produits{
+    border: 1px solid black;
+    border-radius: 10px;
+    padding: 15px;
+    text-align: center;
+    background-color: whitesmoke;
+}
+
+.produits img{
+    width: 100%;
+    height: 200px;
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.produits h3{
+    margin: 20px 0 10px;
+    font-size: 18;
+}
+
+.prix{
+    font-size: 18px;
+    font-weight: bold;
+}
+
+.produits a{
+    display: inline-block;
+    background-color: #0f172a;
+    color: whitesmoke;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px 20px;
+}
+
+.produits a:hover{
+    background-color: orange;
+}
+
+/* ===== Nos Catégories ===== */
+
+.nos-catégories{
+    margin-bottom: 40px;
+    padding: 20px;
+}
+
+.grille-categories{
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 20px;
+    max-width: 1200px;
+    margin: 0 auto;
+
+}
+
+
+/* page produit */
+.detail-produit{
+    width: 100%;
+    max-width: 1200px;
+    margin: 60px auto;
+
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 30px;
+}
+
+.img-produit img{
+    width: 100%;
+    height: 500px;
+
+    border-radius: 10px;
+}
+
+.sous-img{
+    display: flex;
+    gap: 15px;
+    margin-top: 15px;
+}
+
+.sous-img img{
+    width: 100px;
+    height: 100px;
+
+    object-fit: cover;
+    border-radius: 8px;
+}
+
+.produit-info h1{
+    font-size: 30px;
+    margin-top: 0;
+}
+
+.prix-produit{
+    color: orange;
+    font-size: 25px;
+    font-weight: bold;
+}
+
+.description-produit{
+    color: grey;
+    line-height: 1.7;
+}
+
+
+/* Contact */
+#contact-section{
+    width: 86%;
+    max-width: 1400px;
+    display: grid;
+    grid-template-columns: 1fr 1fr;
+    gap: 25px;
+    margin: 50px auto;
+}
+
+.menu-contact{
+    padding: 25px;
+}
+
+.menu-contact h2{
+    margin-top: 0px;
+
+    margin-bottom: 20px;
+    font-size: 40px;
+
+    color:black;
+}
+
+#contact label{
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #334155;
+    margin-bottom: 7px;
+}
+
+#contact label{
+    font-size: 14px;
+    font-weight: 600;
+
+    color: #334155;
+    margin-bottom: 7px;
+}
+
+#contact input, #contact textarea{
+    width: 100%;
+    padding: 12px 14px;
+
+    border: 1px solid #cbd5e1;
+    border-radius: 8px;
+
+    background-color: white;
+    font-family: inherit;
+    font-size: 14px;
+
+    box-sizing: border-box;
+}
+
+#contact textarea{
+    min-height: 130px;
+    resize: vertical;
+}
+
+input, textarea{
+    width: 100%;
+}
+
+.submit-button{
+    background-color: orange;
+    color: whitesmoke;
+    border: none;
+    padding: 13px 20px;
+    width: 100%;
+
+    border-radius: 8px;
+    cursor: pointer;
+    font-weight: 600;
+    font-size: 15px;
+
+    transition: 0.3 ease;
+}
+
+.submit-button:hover{
+    background-color: orangered;
+    transform: translateY(-2px);
+}
+
+.contact-info{
+    background-color: whitesmoke;
+    padding: 10px;
+    border-radius: 16px;
+    border: 1px solid #e2e8f0;
+    box-shadow: 0 6px 20px rgba(15, 23, 42, 0.06);
+}
+
+.contact-info p{
+    font-size: 36px;
+}
+
+.contact-info h3{
+    margin-top: 20px;
+    font-size: 20px;
+
+    color: #0f172a;
+}
+
+.contact-link{
+    margin-right:20px;
+    text-decoration: none;
+    font-size: 30px;
+    color: #0f172a;
+}
+
+.contact-link:hover{
+    background-color: orange;
+}
+
+
+
+.footer{
+    padding: 40px 7% 20px;
+    margin-top: 30px;
+    background-color: black;
+}
+
+.footer-top{
+    display: flex;
+    align-items: center;
+    justify-content: center;
+}
+
+.footer-logo img{
+    width: 180px;
+    height: auto;
+    display: flex;
+    margin-right: 150px;
+}
+
+.n-link{
+    color: white; 
+    text-decoration: none;
+    font-size: 18px;
+    font-weight: 500;
+    margin-left: 50px;
+    transition: color 0.3 ease;
+
+}
+
+.n-link:hover{
+    color: orange;
+}
+
+.footer-links{
+    display: flex;
+    gap: 30px;
+}
+
+.footer-reseau{
+    margin-left: 120px;
+}
+
+.footer-reseau a{
+    color: white;
+}
+
+.footer-bottom{
+    color: #94a3b8;
+    font-size: 14px;
+}
+
+
+   /* ===== TAblzt ===== */
+
+@media (min-widht:768px) {
+    /* ===== Navigation ===== */
+    .navbar ul{
+
+        gap: 20px;
+
+    }
+
+    .nav-link{
+        font-size: 16px;
+    }
+
+    .logo img{
+        width: 100px;
+    }
+
+    /* ===== Acceuil - Hero ===== */
+
+    .hero_section{
+       min-height: 500px;
+        padding: 40px;
+    }
+
+    .hero_section h1{
+        font-size: 50px;
+    }
+
+    .hero_section p{
+        font-size: 24px;
+    }
+
+    /* ===== Produits ===== */
+
+    .grille-produits{
+        grid-template-columns: repeat(2, 1fr);
+    }
+
+    /* ===== Catégories ===== */
+    .grille-categories{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* ===== Pages produit ===== */
+    .detail-produit{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    /* ===== Contact ===== */
+
+    #contact-section{
+        grid-template-columns: 1fr 1fr;
+    }
+
+    .contact-info p{
+        font-size: 22px;
+    }
+
+    table{
+        font-size: 16px;
+    }
+
+    /* ===== Panier ===== */
+
+    .panier-bouton{
+        width: auto;
+    }
+
+    /* Footer */
+
+    .footer-logo img{
+        width: 130px;
+        margin-right: 40px;
+    }
+
+    .footer-links{
+        gap: 15px;
+    }
+
+    .n-link{
+        margin-left: 10px;
+        font-size: 15px;
+    }
+
+    .footer-reseau{
+        margin-left: 40px;
+    }
+}
+
+    /* Desktop */
+@media (min-width: 1024px) {
+
+     /* ===== Navigation ===== */
+    .navbar ul{
+
+        gap: 30px;
+
+    }
+
+    .nav-link{
+        font-size: 20px;
+    }
+
+    .logo img{
+        width: 130px;
+    }
+
+    .hero_section{
+       min-height: 650px;
+        padding: 80px 60px;
+    }
+
+    .hero_section h1{
+        font-size: 74px;
+    }
+
+    .hero_section p{
+        font-size: 28px;
+    }
+
+    /* ===== Produits ===== */
+
+    .grille-produits{
+        grid-template-columns: repeat(3, 1fr);
+    }
+
+    /* ===== Catégories ===== */
+    .grille-categories{
+        grid-template-columns: repeat(4, 1fr);
+    }
+
+    /* ===== Contact ===== */
+
+    .contact-info p{
+        font-size: 22px;
+    }
+
+    table{
+        font-size: 16px;
+    }
+
+    .footer-top{
+        justify-content: space-around;
+    }
+    
+    .footer-logo img{
+        flex: 0 0 150px;
+    }
+}
+
+/* Keep keyboard focus visible without changing the visual layout. */
+a:focus-visible,
+button:focus-visible,
+input:focus-visible,
+textarea:focus-visible {
+    outline: 3px solid #b45309;
+    outline-offset: 3px;
+}
+
+.visually-hidden {
+    position: absolute;
+    width: 1px;
+    height: 1px;
+    padding: 0;
+    margin: -1px;
+    overflow: hidden;
+    clip: rect(0, 0, 0, 0);
+    white-space: nowrap;
+    border: 0;
+}

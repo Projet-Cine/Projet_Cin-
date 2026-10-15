@@ -4,9 +4,8 @@
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <link rel="stylesheet" href="https://cdnjs.cloudflare.com/ajax/libs/font-awesome/6.7.2/css/all.min.css">
-    <script src="/Js/scripts.js" mode="defer"></script>
     <link rel="stylesheet" href="/css/style.css">
-    <title>Hoopsolid - Boutique Basketball</title>
+    <title>CinéVillage</title>
 </head>
 <body>
     <header class="header">
@@ -17,9 +16,8 @@
                         <img src="/img/Logo cinéma.png" alt="logo hoopsolid" class="logo">
                     </a>
                 </li>
-                <li><a href="/index.html" class="nav-link">Acceuil</a></li>
+                <li><a href="/index.html" class="nav-link">Accueil</a></li>
                 <li><a href="/rechercher.html" class="nav-link">Recherche</a></li>
-                <li><a href="#Notre mission" class="nav-link">Notre mission</a></li>
                 <li><a href="/contact.html" class="nav-link">Contact</a></li>
                 <a href="/connexion.html" class="btn-connexion">
                     <i class="fa-solid fa-magnifying-glass"></i>
@@ -31,95 +29,32 @@
         <h1>Vivez la magie du <br><span>grand écran.</span></h1>
 
         <p>
-            Soutenez notre association et <br> porter nos couleurs.
+            Le point de rendez-vous de ceux <br> qui aiment le septième art.
         </p>
 
-        <a href="/boutique.html" class="btn-hero">
+        <a href="./search.html" class="btn-hero">
             Voir les films
             <i class="fa-solid fa-arrow-right"></i>
         </a>
     </section>
 
-    <main id="boutique">
-        <section class="produits-phares">
+    <main id="tendance">
+        <section class="tendance">
             <h2>Films tendance</h2>
 
-            <div class="grille-produits">
-                
-                <article class="produits">
-                    <img src="/img/exec-0e698252-c7c3-469c-a366-5b0d8f9b7f79.png" alt="Photo de Maillot HoopSolid">
-
-                    <h3>Maillot HoopSolid</h3>
-
-                    <a href="/produits/Short.html">
-                        Voir le produit
-                    </a>
-                </article>
-
-                <article class="produits">
-                    <img src="/img/exec-b2b32b20-220e-4212-ac04-8574f8e5b108.png" alt="Photo de Pull HoopSolid">
-
-                    <h3>Pull HoopSolid</h3>
-
-
-                    <a href="/produits/Pull.html">
-                        Voir le produit
-                    </a>
-                </article>
-
-                <article class="produits">
-                    <img src="/img/exec-5986a8dc-0471-41e3-8cf2-102bcd92d145.png" alt="Photo de Maillot HoopSolid">
-
-                    <h3>Maillot HoopSolid</h3>
-
-                    <a href="/produits/Maillot.html">
-                        Voir le produit
-                    </a>
-                </article>
+            <div class="films_tendances">
+                <!-- Liste de 3 films tendances en 2026 -->
             </div>
 
         </section>
 
-        <section class="nos-catégories">
+        <section class="plusDeFilms2026">
             <h2>Plus de films 2026</h2>
 
-            <div class="grille-categories">
-                <article class="produits">
-                    <a href="/catégories/ballons.html">
-                       <img src="/img/exec-e19c4c06-51cc-4e6c-824b-82d4f955b3f1.png" alt="Photo de Ballons"> 
-                    </a>
-                    
+            <div id="liste-2026">
 
-                    <h3>Ballons</h3>
-
-                </article>
-
-                <article class="produits">
-                    <a href="/catégories/vetements.html">
-                        <img src="/img/exec-31c75158-162d-4efe-ad17-bb373479d274.png" alt="Photo de Vêtements">
-                    </a>
-
-                    <h3>Vêtements</h3>
-
-                </article>
-
-                <article class="produits">
-                    <a href="/catégories/accessoires.html">
-                       <img src="/img/exec-459d0f9a-a829-4a7f-985a-063d92a4119c.png" alt="Photo de Accessoires"> 
-                    </a>
-
-                    <h3>Accessoires</h3>
-
-                </article>
-
-                <article class="produits">
-                    <a href="/catégories/goodies.html">
-                        <img src="/img/exec-eff0637f-4aaf-4dfa-a832-1f4bb354dcd9.png" alt="Photo de Gourdes">
-                    </a>
-                    
-                    <h3>Gourdes</h3>
-                </article>
             </div>
+            <button id="charger_plus">Charger plus de films</button>
         </section>
     </main>
 
@@ -132,9 +67,8 @@
             </div>
 
             <div class="footer-links">
-                <a class="n-link" href="/index.html">Acceuil</a>
+                <a class="n-link" href="/index.html">Accueil</a>
                 <a class="n-link" href="/boutique.html">Boutique</a>
-                <a class="n-link" href="#Notre mission">Notre mission</a>
                 <a class="n-link" href="/contact.html">Contact</a>
             </div>
 
@@ -159,5 +93,6 @@
         </div>
 
     </footer>
+    <script type="module" src="./Js/index.js"></script>
 </body>
 </html>
