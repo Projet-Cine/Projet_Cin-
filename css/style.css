@@ -1,11 +1,17 @@
 @import url('https://fonts.googleapis.com/css2?family=Montserrat:ital,wght@0,100..900;1,100..900&display=swap');
 
 body {
+    display: flex;
+    flex-direction: column;
     font-family: 'Montserrat', sans-serif;
     margin: 0;
     padding: 0;
     background-color: #061018;
     color: white;
+}
+
+html, body {
+    height: 100%;
 }
 
 .header{
@@ -16,12 +22,6 @@ body {
     padding: 10px;
     align-content: center;
     justify-content: space-around;
-}
-
-
-
-.logo{
-    flex: 0 0 auto;
 }
 
 .logo img{
@@ -89,40 +89,52 @@ body {
     background-color: orangered;
 }
 
-.footer{
-    padding: 40px 7% 20px;
-    margin-top: 30px;
-    background-color: black;
-}
 
-.footer-top{
+footer{
     display: grid;
-    grid-template-columns: auto 1fr auto;
-    align-items: center;
-    justify-content: space-between;
+    grid-template: 1fr 1fr / 0.5fr 1fr 0.5fr;
+    background-color: black;
+    padding-top: 20px;
+    margin-top: auto;
 }
 
 .footer-logo img{
-    width: 180px;
+    width: 130px;
     height: auto;
 }
 
-.n-link{
+.footer-logo {
+    display: flex;
+    align-items: center;
+}
+
+.page-link{
     color: white; 
     text-decoration: none;
     font-size: 18px;
     font-weight: bold;
 }
 
-.n-link:hover{
+.page-link:hover{
     color: orange;
 }
 
 .footer-links{
     display: flex;
+    align-items: center;
     justify-content: space-around;
 }
 
+.footer-reseau {
+    display: flex;
+    justify-content: flex-end;
+    align-items: center;
+    gap: 20px;
+}
+
+.footer-reseau, .footer-logo {
+    justify-content: center;
+}
 
 .footer-reseau a{
     color: white;
@@ -133,16 +145,19 @@ body {
 
 
 .footer-bottom{
+    grid-column: 1/4;
+    text-align: center;
     color: #94a3b8;
     font-size: 14px;
 }
 
 
 
-/* ===== Rechercher===== */
+/* ===== Rechercher ===== */
 
 .search-form{
     display: flex;
+    justify-items: center;
     width: 40%;
     gap: 10px;
 }
@@ -165,12 +180,42 @@ search-form button[type="submit"]{
     cursor: pointer;
 }
 
-.grille-produits{
+.recherche_section {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    align-items: center;
+}
+
+#search-results{
     display: grid;
     max-width: 1200px;
     grid-template-columns:1fr;
     margin: 0 auto;
     gap: 20px;
+}
+
+#search-results h3 {
+    text-align: center;
+}
+
+
+#search-results a {
+    display: flex;
+    flex-direction: column;
+    justify-content: center;
+    text-align: center;
+    border: #cbd5e1 2px solid;
+    padding: 5px;
+    background-color: #0f172a;
+    color: whitesmoke;
+    text-decoration: none;
+    border-radius: 5px;
+    padding: 10px;
+}
+
+#search-results a:hover{
+    background-color: orangered;
 }
 
 
@@ -179,7 +224,7 @@ search-form button[type="submit"]{
 .tendance{
     margin-bottom: 40px;
     padding: 20px;
-}    
+} 
 
 .films_tendances {
     display: grid;
@@ -254,8 +299,8 @@ search-form button[type="submit"]{
 }
 
 
-/* page produit */
-.detail-produit{
+/* page movie */
+.detail-film{
     width: 100%;
     max-width: 1200px;
     margin: 60px auto;
@@ -265,21 +310,16 @@ search-form button[type="submit"]{
     gap: 30px;
 }
 
-.img-produit img{
+.img-film img{
     width: 100%;
     height: auto;
 
     border-radius: 10px;
 }
 
-.produit-info h1{
+.film-info h1{
     font-size: 30px;
     margin-top: 0;
-}
-
-.description-produit{
-    color: grey;
-    line-height: 1.7;
 }
 
 
@@ -380,9 +420,7 @@ textarea:focus-visible {
 @media (min-widht:768px) {
     /* ===== Navigation ===== */
     .navbar ul{
-
         gap: 20px;
-
     }    
 
     .nav-link{
@@ -408,19 +446,11 @@ textarea:focus-visible {
         font-size: 24px;
     }    
 
-    /* ===== Produits ===== */
-
-    .grille-produits{
+    #search-results{
         grid-template-columns: repeat(2, 1fr);
     }    
 
-    /* ===== Catégories ===== */
-    .grille-categories{
-        grid-template-columns: repeat(3, 1fr);
-    }    
-
-    /* ===== Pages produit ===== */
-    .detail-produit{
+    .detail-film{
         grid-template-columns: 1fr 1fr;
     }    
 
@@ -430,23 +460,12 @@ textarea:focus-visible {
         font-size: 16px;
     }    
 
-    /* ===== Panier ===== */
-
-    .panier-bouton{
-        width: auto;
-    }    
-
     /* Footer */
-
-    .footer-logo img{
-        width: 130px;
-    }    
-
     .footer-links{
         gap: 15px;
     }    
 
-    .n-link{
+    .page-link{
         margin-left: 10px;
         font-size: 15px;
     }    
@@ -462,9 +481,7 @@ textarea:focus-visible {
 
      /* ===== Navigation ===== */
     .navbar ul{
-
         gap: 30px;
-
     }
 
     .nav-link{
@@ -488,15 +505,10 @@ textarea:focus-visible {
         font-size: 28px;
     }
 
-    /* ===== Produits ===== */
+    /* ===== Search ===== */
 
-    .grille-produits{
+    #search-results{
         grid-template-columns: repeat(3, 1fr);
-    }
-
-    /* ===== Catégories ===== */
-    .grille-categories{
-        grid-template-columns: repeat(4, 1fr);
     }
 
     /* ===== Contact ===== */
@@ -509,10 +521,6 @@ textarea:focus-visible {
         font-size: 16px;
     }
 
-    .footer-top{
-        justify-content: space-around;
-    }
-    
     .footer-logo img{
         flex: 0 0 150px;
     }
