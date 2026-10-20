@@ -189,11 +189,25 @@ search-form button[type="submit"]{
 
 #search-results{
     display: grid;
-    max-width: 1200px;
-    grid-template-columns:1fr;
+    max-width: 100%;
+    grid-template-columns: repeat(5, 1);
     margin: 50px;
     gap: 20px;
 }
+
+.films {
+    display: flex;
+    flex-direction: column;
+}
+
+.films img {
+    width: 100%;
+}
+
+.films a {
+    margin-top: auto;
+}
+
 
 #search-results h3 {
     text-align: center;
@@ -524,7 +538,7 @@ textarea:focus-visible {
     /* ===== Search ===== */
 
     #search-results{
-        grid-template-columns: repeat(4, 1fr);
+        grid-template-columns: repeat(5, 1fr);
     }
 
     /* ===== Contact ===== */
