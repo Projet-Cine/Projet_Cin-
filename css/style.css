@@ -189,16 +189,29 @@ search-form button[type="submit"]{
 
 #search-results{
     display: grid;
-    max-width: 1200px;
-    grid-template-columns:1fr;
-    margin: 0 auto;
+    max-width: 100%;
+    grid-template-columns: repeat(5, 1);
+    margin: 50px;
     gap: 20px;
 }
+
+.films {
+    display: flex;
+    flex-direction: column;
+}
+
+.films img {
+    width: 100%;
+}
+
+.films a {
+    margin-top: auto;
+}
+
 
 #search-results h3 {
     text-align: center;
 }
-
 
 #search-results a {
     display: flex;
@@ -206,7 +219,6 @@ search-form button[type="submit"]{
     justify-content: center;
     text-align: center;
     border: #cbd5e1 2px solid;
-    padding: 5px;
     background-color: #0f172a;
     color: whitesmoke;
     text-decoration: none;
@@ -216,6 +228,18 @@ search-form button[type="submit"]{
 
 #search-results a:hover{
     background-color: orangered;
+}
+
+#btnVoirPlus {
+    display: block;
+    margin: 20px auto;
+    padding: 15px 40px 10px;
+    width: 40%;
+    border-radius: 8px;
+    font-size: 30px;
+    font-weight: 400;
+    background-color: red;
+    cursor: pointer;
 }
 
 
@@ -294,8 +318,14 @@ search-form button[type="submit"]{
 
 #charger_plus {
     align-self: center;
-    width: fit-content;
     margin: 20px auto;
+    padding: 15px 40px 10px;
+    width: 40%;
+    border-radius: 8px;
+    font-size: 30px;
+    font-weight: 400;
+    background-color: red;
+    cursor: pointer;
 }
 
 
@@ -508,7 +538,7 @@ textarea:focus-visible {
     /* ===== Search ===== */
 
     #search-results{
-        grid-template-columns: repeat(3, 1fr);
+        grid-template-columns: repeat(5, 1fr);
     }
 
     /* ===== Contact ===== */
