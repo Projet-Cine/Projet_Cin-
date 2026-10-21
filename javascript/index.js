@@ -1,5 +1,5 @@
-export const API_KEY = 'b30ce6ed';
-export const BASE_URL = 'https://www.omdbapi.com/';
+export const API_KEY = "b30ce6ed";
+export const BASE_URL = "https://www.omdbapi.com/";
 
 export async function chercherFilms(terme, page, annee) {
   let url = `${BASE_URL}?apikey=${API_KEY}&s=${encodeURIComponent(terme)}&type=movie&page=${page}`;
@@ -11,10 +11,9 @@ export async function chercherFilms(terme, page, annee) {
   if (donnees.Response === "False") {
     return [];
   }
-  console.log()
+  console.log();
   return donnees.Search;
 }
-
 
 async function recupererFilm(titre) {
   const url = `${BASE_URL}?apikey=${API_KEY}&t=${encodeURIComponent(titre)}`;
@@ -24,19 +23,22 @@ async function recupererFilm(titre) {
   return film;
 }
 
-
 const TITRES_TENDANCES = ["Obsession", "Project Hail Mary", "The Odyssey"];
 
 function creerCarte(film) {
   const resume = film.Plot ? `<p>${film.Plot}</p>` : "";
   return `
   <article class="carte-film">
-    <img src="${film.Poster}" alt="Affiche de ${film.Title}"></img>
-    <h3>${film.Title}</h3>
-    <p>${film.Year}</p>
-    <p>${film.Director}</p>
-    ${resume}
-    <a href="./movie.html?id=${film.imdbID}">En savoir plus</a>
+    <div>
+      <img src="${film.Poster}" alt="Affiche de ${film.Title}"></img>
+    </div>
+    <div class="infos">
+      <h3>${film.Title}</h3>
+      <p>${film.Year}</p>
+      <p>${film.Director}</p>
+      ${resume}
+      <a href="./movie.html?id=${film.imdbID}">En savoir plus</a>
+    </div>
   </article>
   `;
 }
@@ -51,9 +53,7 @@ async function afficherTendances() {
   }
 }
 
-
 afficherTendances();
-
 
 const TERME_2026 = "man";
 let pageApi = 1;
@@ -70,7 +70,6 @@ function creerPetiteCarte(film) {
   `;
 }
 
-
 // Affichage de 5 films, Omdb en affiche 10 par page
 // donc on doit limiter les résulats en utilisant une réserve
 async function chargerPlus() {
@@ -79,7 +78,7 @@ async function chargerPlus() {
   // S'il ,reste moins de 5 films en réserve : on va en chercher 10 de plus
   if (reserve.length < 5) {
     const nouveaux = await chercherFilms(TERME_2026, pageApi, 2026);
-    reserve.push(...nouveaux);  
+    reserve.push(...nouveaux);
     pageApi++;
   }
 
@@ -98,4 +97,3 @@ async function chargerPlus() {
 
 document.getElementById("charger_plus").addEventListener("click", chargerPlus);
 chargerPlus();
-
