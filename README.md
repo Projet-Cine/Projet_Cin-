@@ -26,3 +26,6 @@ Page dédiée à la recherche de films de façon dynamique, les résultats arriv
 - contact :
 Un formulaire de contact pour demander des renseignements.
 
+Dépôt GitHub
+Lien du dépôt : https://github.com/Projet-Cine/Projet_Cin-.git
+
