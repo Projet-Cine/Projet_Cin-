@@ -24,10 +24,21 @@ html, body {
     justify-content: space-around;
 }
 
+header {
+    position: sticky;
+    top: 0;
+    z-index: 1000;
+}
+
 .logo img{
-    width: 80px;
+    width: 130px;
     height: auto;
     display: block;
+}
+
+.logo a {
+    justify-content: center;
+    align-content: center;
 }
 
 .nav-link{
@@ -165,7 +176,6 @@ footer{
 .search-form input[type="text"]{
     flex: 1;
     padding: 10px;
-    margin-left: 30px;
     border: none;
     border-radius: 4px 0 0 4px;
     font-size: 16px;
@@ -187,10 +197,15 @@ search-form button[type="submit"]{
     align-items: center;
 }
 
+.resultats_recherche {
+    display: flex;
+    flex-direction: column;
+}
+
 #search-results{
     display: grid;
     max-width: 100%;
-    grid-template-columns: repeat(5, 1);
+    grid-template-columns: repeat(5, 1fr);
     margin: 50px;
     gap: 20px;
 }
@@ -230,17 +245,6 @@ search-form button[type="submit"]{
     background-color: orangered;
 }
 
-#btnVoirPlus {
-    display: block;
-    margin: 20px auto;
-    padding: 15px 40px 10px;
-    width: 40%;
-    border-radius: 8px;
-    font-size: 30px;
-    font-weight: 400;
-    background-color: red;
-    cursor: pointer;
-}
 
 
 /* ===== Films tendances ===== */
@@ -316,16 +320,19 @@ search-form button[type="submit"]{
     justify-content: center;
 }
 
+#btnVoirPlus,
 #charger_plus {
+    display: block;
     align-self: center;
-    margin: 20px auto;
-    padding: 15px 40px 10px;
-    width: 40%;
+    width: fit-content;
     border-radius: 8px;
-    font-size: 30px;
-    font-weight: 400;
     background-color: red;
     cursor: pointer;
+
+    padding: 10px;
+    margin: 20px;
+    font-weight: bold;
+    font-size: large;
 }
 
 
@@ -338,6 +345,10 @@ search-form button[type="submit"]{
     display: grid;
     grid-template-columns: 1fr 1fr;
     gap: 30px;
+}
+
+.img-film {
+    margin: auto;
 }
 
 .img-film img{
@@ -447,112 +458,91 @@ textarea:focus-visible {
 
 
 
-@media (min-widht:768px) {
-    /* ===== Navigation ===== */
-    .navbar ul{
-        gap: 20px;
-    }    
+@media only screen and (min-width: 481px) and (max-width: 768px) {
+    .films_tendances {
+        grid-template-columns: 1fr;
+        gap: 10px;
+    }
 
-    .nav-link{
-        font-size: 16px;
-    }    
+    .carte-film {
+        max-width: 90%;
+    }
 
-    .logo img{
-        width: 100px;
-    }    
+    #search-results {
+        grid-template-columns: 1fr 1fr 1fr;
+        margin: 10px;
+    }
 
-    /* ===== Acceuil - Hero ===== */
+    #liste-2026 {
+        grid-template-columns: 1fr 1fr 1fr;
+        padding: 10px;
+    }
 
-    .hero_section{
-       min-height: 500px; 
-        padding: 40px;
-    }    
+    .search-form {
+        width: 90%;
+    }
 
-    .hero_section h1{
-        font-size: 50px;
-    }    
+    #contact {
+        padding-bottom: 21px;
+    }
 
-    .hero_section p{
-        font-size: 24px;
-    }    
 
-    #search-results{
-        grid-template-columns: repeat(2, 1fr);
-    }    
+}
 
-    .detail-film{
+@media only screen and (max-width: 480px) {
+    .header {
+        justify-content: space-between;
+    }
+
+    #search-results {
         grid-template-columns: 1fr 1fr;
-    }    
+        margin: 10px;
+    }
 
-    /* ===== Contact ===== */
-
-    table{
-        font-size: 16px;
-    }    
-
-    /* Footer */
-    .footer-links{
-        gap: 15px;
-    }    
-
-    .page-link{
-        margin-left: 10px;
-        font-size: 15px;
-    }    
+    .search-form {
+        width: 90%;
+    }
     
-    .footer-reseau{
-        margin-left: 40px;
-    }    
-}    
-
-
-
-@media (min-width: 1024px) {
-
-     /* ===== Navigation ===== */
-    .navbar ul{
-        gap: 30px;
+    .films_tendances {
+        grid-template-columns: 1fr;
+        gap: 10px;
     }
 
-    .nav-link{
-        font-size: 20px;
+    #liste-2026 {
+        grid-template-columns: 1fr 1fr;
+        padding: 10px;
     }
 
-    .logo img{
-        width: 130px;
+    .hero_section h1 {
+        padding: 0;
     }
 
-    .hero_section{
-       min-height: 650px;
-        padding: 80px 60px;
+    .hero_section h1 span {
+        color: white;
     }
 
-    .hero_section h1{
-        font-size: 74px;
+    #contact {
+        padding-bottom: 21px;
     }
 
-    .hero_section p{
-        font-size: 28px;
+    .detail-film {
+        grid-template-columns: auto;
     }
 
-    /* ===== Search ===== */
-
-    #search-results{
-        grid-template-columns: repeat(5, 1fr);
+    .img-film {
+        display: flex;
+        justify-content: center;
+    }
+    
+    #film-poster {
+        max-width: 90%;
+        
     }
 
-    /* ===== Contact ===== */
-
-    .contact-info p{
-        font-size: 22px;
+    .film-info {
+        padding: 10px;
     }
 
-    table{
-        font-size: 16px;
-    }
 
-    .footer-logo img{
-        flex: 0 0 150px;
-    }
 }
 
