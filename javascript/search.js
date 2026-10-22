@@ -35,7 +35,7 @@ async function rechercherFilms(recherche, page = 1) {
 
     try {
         const reponse = await fetch(
-            `https://www.omdbapi.com/?apikey=${apiKey}&s=${encodeURIComponent(recherche)}`
+            `https://www.omdbapi.com/?apikey=${apiKey}&s=${encodeURIComponent(recherche)}&page=${page}`
         );
 
         // Si le serveur répond avec une erreur (404, 500...), on passe au catch
